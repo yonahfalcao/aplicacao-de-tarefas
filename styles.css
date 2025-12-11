@@ -1,0 +1,158 @@
+/* ====================== */
+/*      GLOBAL            */
+/* ====================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #8b00ff, #34006b, #000000);
+  color: #f0eaff;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 80px; /* espaço para navbar fixa */
+}
+
+/* ====================== */
+/*      NAVBAR            */
+/* ====================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* <-- ajustado */
+  padding: 0 40px; /* <-- adiciona respiro nas laterais */
+  z-index: 1000;
+}
+
+.navbar h2 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* agrupe os botões corretamente à direita */
+.nav-buttons {
+  display: flex;
+  gap: 20px; /* <-- reduzido de 200px para 20px */
+}
+
+/* ====================== */
+/*      CONTAINER         */
+/* ====================== */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ou center se quiser centralizar verticalmente */
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.container.centered {
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+/* ====================== */
+/*        HEADINGS        */
+/* ====================== */
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ====================== */
+/*      BOTÕES            */
+/* ====================== */
+
+button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d87bff, #8f00ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ee95ff, #ad25ff);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 12px #b44bff, 0 0 25px #8a00ff;
+}
+
+/* Botão excluir */
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d4d, #b30000);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #ff7373, #cc0000);
+  box-shadow: 0 0 12px #ff2a2a, 0 0 25px #b30000;
+}
+
+/* ====================== */
+/*        INPUTS          */
+/* ====================== */
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #d9c5ff;
+}
+
+/* ====================== */
+/*     CARD DAS TAREFAS   */
+/* ====================== */
+
+.task-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  margin-top: 15px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
